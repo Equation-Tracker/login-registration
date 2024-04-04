@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+    <title>Home</title>
+  </head>
+  <body>
+    <div class="home">
+      <div class="greet">
+        <h1 id="greeting">Hello</h1>
+      </div>
+      <div class="user-btn">
+        <button id="user-log" onclick="location.href='/login'">Login</button>
+        <button id="user-reg" onclick="location.href='/register'">
+          Register
+        </button>
+        <button id="logout">Logout</button>
+        <button id="del">Delete Account</button>
+      </div>
+    </div>
+    <div class="delete-user" id="delete-user">
+      <form action="" class="del-form">
+        <h1>Delete Account</h1>
+        <h3 id="msg"></h3>
+        <input
+          type="password"
+          id="password"
+          placeholder="Enter your password"
+          autocomplete="off"
+        /><br />
+        <div class="form-btn">
+          <button id="reset" type="reset" onclick="location.reload()">
+            Cancel
+          </button>
+          <button id="delete-btn" type="submit">Delete</button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
