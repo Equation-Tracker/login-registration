@@ -2,7 +2,6 @@
 const express = require('express'); //To run a server
 const mysql = require("mysql2"); //MySQL database
 const bodyParser = require('body-parser'); //to Contact with files
-const path = require('path');
 const {connection} = require('./db-connection.js') //MySQL database connection info
 
 const app = express();
@@ -13,7 +12,7 @@ db.connect((err)=>{
     console.log('Connected!');
 })
 
-let initialPath = path.join(__dirname, 'public');
+let initialPath = __dirname;
 
 app.use(bodyParser.json());
 app.use(express.static(initialPath));
